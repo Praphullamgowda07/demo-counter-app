@@ -6,6 +6,15 @@ pipeline {
             steps {
                 git branch: 'main', url: 'https://github.com/Praphullamgowda07/demo-counter-app.git'
             }
-        }   
+        }  
+
+        stage('UNIT Testing') {
+            steps {
+                sh 'mvn test'
+            }
+        }  
+
+
+        
     }
 }
